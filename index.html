@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта приключений с Ксюшей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="container">
+            <header class="main-header">
+                <h1>Ксюша, с Днём Рождения! 🎉</h1>
+                <p class="birthday-wish">Пусть этот год принесёт тебе столько же радости, сколько ты даришь окружающим! 🥳🎂</p>
+                <div class="instructions">
+                    Это карта нашей дружбы — путешествие во времени от нашей первой встречи до сегодняшнего дня!<br>
+                    💡 Наводи курсор на разноцветные метки и нажимай, чтобы увидеть описание события.
+                </div>
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #4A90E2"></div>
+                        <span>Карьера</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #FF9F43"></div>
+                        <span>Выставки</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #9B59B6"></div>
+                        <span>Культурные мероприятия</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #F1C40F"></div>
+                        <span>Активный отдых</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #1ABC9C"></div>
+                        <span>Эксперименты</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #E74C3C"></div>
+                        <span>Тимбилдинги</span>
+                    </div>
+                </div>
+            </header>
+    
+        <div class="maps-container">
+            <div class="adventure-map" id="map-2023-2024">
+                <div class="map-title">2023-2024</div>
+                <div class="map-container">
+                    <!-- 2023 -->
+                    <div class="marker marker-1 career-marker" data-event="start-work">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">4 Сен 2023</div>
+                    </div>
+            
+                    <div class="marker marker-2 corporate-marker" data-event="first-corporate">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">4 Ноя 2023</div>
+                    </div>
+            
+                    <!-- 2024 -->
+                    <div class="marker marker-3 art-marker" data-event="tretyakovka">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">25 Фев 2024</div>
+                    </div>
+            
+                    <div class="marker marker-4 art-marker" data-event="dali-picasso">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">7 Мар 2024</div>
+                    </div>
+            
+                    <div class="marker marker-5 art-marker" data-event="van-gogh">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">31 Мар 2024</div>
+                    </div>
+            
+                    <div class="marker marker-6 art-marker" data-event="realism">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">8 Июн 2024</div>
+                    </div>
+            
+                    <div class="marker marker-7 experiment-marker" data-event="planetarium">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">20 Июл 2024</div>
+                    </div>
+            
+                    <div class="marker marker-8 sports-marker" data-event="zaryadie">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">11 Авг 2024</div>
+                    </div>
+            
+                    <div class="marker marker-9 corporate-marker" data-event="it-picnic">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">17 Авг 2024</div>
+                    </div>
+            
+                    <div class="marker marker-10 theater-marker" data-event="musical">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">10 Окт 2024</div>
+                    </div>
+            
+                    <div class="marker marker-11 corporate-marker" data-event="corporate-2024">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">3 Ноя 2024</div>
+                    </div>
+            
+                    <div class="marker marker-12 experiment-marker" data-event="dance-show">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">30 Ноя 2024</div>
+                    </div>
+            
+                    <div class="marker marker-13 career-marker" data-event="promotion">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">1 Дек 2024</div>
+                    </div>
+            
+                    <div class="marker marker-14 theater-marker" data-event="vivaldi">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">15 Дек 2024</div>
+                    </div>
+
+                    <!-- После marker-14 -->
+                    <div class="marker marker-14b corporate-marker" data-event="mini-corporate-dec">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">27 Дек 2024</div>
+                    </div>
+            
+                    <div class="marker marker-15 theater-marker" data-event="cinderella">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">30 Дек 2024</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="adventure-map" id="map-2025">
+                <div class="map-title">2025</div>
+                <div class="map-container">
+                    <!-- 2025 -->
+                    <div class="marker marker-16 sports-marker" data-event="skating-vdnh">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">3 Янв 2025</div>
+                    </div>
+            
+                    <div class="marker marker-17 experiment-marker" data-event="snowboard">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">6 Янв 2025</div>
+                    </div>
+            
+                    <div class="marker marker-18 sports-marker" data-event="skating-bratskaya">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">18 Янв 2025</div>
+                    </div>
+            
+                    <div class="marker marker-19 sports-marker" data-event="skating-bolotnaya">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">25 Янв 2025</div>
+                    </div>
+            
+                    <div class="marker marker-20 sports-marker" data-event="skating-kremlin">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">9 Фев 2025</div>
+                    </div>
+            
+                    <div class="marker marker-21 theater-marker" data-event="sasha-birthday">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">11 Фев 2025</div>
+                    </div>
+            
+                    <div class="marker marker-22 art-marker" data-event="peredvizhniki">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">23 Мар 2025</div>
+                    </div>
+            
+                    <div class="marker marker-23 art-marker" data-event="bosch-bruegel">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">17 Май 2025</div>
+                    </div>
+            
+                    <div class="marker marker-24 theater-marker" data-event="mhat">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">10 Июн 2025</div>
+                    </div>
+            
+                    <div class="marker marker-25 experiment-marker" data-event="todes">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">20 Июн 2025</div>
+                    </div>
+            
+                    <div class="marker marker-26 experiment-marker" data-event="pottery">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">4 Июл 2025</div>
+                    </div>
+            
+                    <div class="marker marker-26b sports-marker" data-event="sup-boarding">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">4 Авг 2025</div>
+                    </div>
+                                
+                    <div class="marker marker-27 corporate-marker" data-event="detective-party">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">8 Авг 2025</div>
+                    </div>
+
+                    <div class="marker marker-28 corporate-marker" data-event="it-picnic-2025">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">16 Авг 2025</div>
+                    </div>
+            
+                    <div class="marker marker-29 corporate-marker" data-event="ozone-code">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">13 Сен 2025</div>
+                    </div>
+
+                    <div class="marker marker-30 birthday-marker" data-event="ksusha-birthday">
+                        <div class="marker-pin"></div>
+                        <div class="marker-pulse"></div>
+                        <div class="marker-date">17 Окт 2025</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Всплывающие окна -->
+        <div id="start-work" class="event-popup">
+            <div class="popup-content career-event">
+                <span class="close-btn">&times;</span>
+                <h2>Удачный побег из R&D 🚀</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_1.png" alt="Перевод">
+                    </div>
+                <div class="event-date">4 сентября 2023</div>
+                <p>Твой переход к нам — одно из самых удачных событий в нашем отделе. Наконец-то появился человек, с которым всё с полуслова. 
+                    Теперь я не одна в этой горе документации, схем и тестов. Работать стало не только легче, но и интереснее.</p>
+                <div class="event-tags">
+                    <span class="tag career-tag">#карьера</span>
+                    <span class="tag career-tag">#LEADWMS</span>
+                    <span class="tag career-tag">#начало</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="promotion" class="event-popup">
+            <div class="popup-content career-event">
+                <span class="close-btn">&times;</span>
+                <h2>Заслуженный грейд 🎯</h2>
+                        <div class="event-photo">
+                            <img src="photos/foto_13.png" alt="Повышение">
+                        </div>
+                <div class="event-date">1 декабря 2024</div>
+                <p>Мы это сделали! Вместе пробили систему грейдов для аналитиков, и ты выросла из младшего специалиста в уверенного профи.
+                Пришлось немного побороться с руководством, но мы добились твоего заслуженного повышения до системного аналитика.</p>
+                <div class="event-tags">
+                    <span class="tag career-tag">#повышение</span>
+                    <span class="tag career-tag">#карьерныйрост</span>
+                    <span class="tag career-tag">#победа</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="first-corporate" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Первый корпоратив 🎊</h2>
+                        <div class="event-photo">
+                            <img src="photos/foto_2.jpg" alt="Первый корпоратив">
+                        </div>
+                <div class="event-date">4 ноября 2023</div>
+                <p>После общения только голосом наконец встретились на корпоративе.
+                    Поговорили, потанцевали, и стало окончательно ясно: работать вместе будет интересно.</p>
+                <div class="event-tags">
+                    <span class="tag">#корпоратив</span>
+                    <span class="tag">#знакомство</span>
+                    <span class="tag">#тимбилдинг</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="tretyakovka" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Первый культурный десант 🎨</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_3.jpg" alt="Выставка в Третьяковке">
+                    </div>
+                <div class="event-date">25 февраля 2024</div>
+                <p>Наша первая Третьяковка втроём с Юлей. 
+                    Тогда мы ещё просто приятно проводили время как коллеги, даже не догадываясь, что так сдружимся. Приятно вспомнить, с чего всё начиналось.</p>
+                <div class="event-tags">
+                    <span class="tag">#третьяковка</span>
+                    <span class="tag">#искусство</span>
+                    <span class="tag">#началотрадиции</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="dali-picasso" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Выставка «Сальвадор Дали и Пабло Пикассо» 🎨</h2>
+                     <div class="event-photo">
+                        <img src="photos/foto_4.jpg" alt="Пикассо и Дали">
+                    </div>
+                <div class="event-date">7 марта 2024</div>
+                                <p>Третьяковка удалась — решили повторить! 
+                                  На этот раз покоряли Дали и Пикассо в компании Вики. Искусство, общие впечатления и лёгкость общения — вот что делает наши встречи такими приятными.</p>
+                <div class="event-tags">
+                    <span class="tag">#дали</span>
+                    <span class="tag">#пикассо</span>
+                    <span class="tag">#искусство</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="van-gogh" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Выставка «Ван Гог. Жизнь как Звёздная ночь»🌻</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_5.jpg" alt="Ван Гог">
+                    </div>
+                <div class="event-date">31 марта 2024</div>
+                <p>Выставка Ван Гога стала третьей в нашей череде культурных вылазок. Приятно осознавать, что у нас сложилась своя маленькая традиция — совмещать приятное общение с искусством.</p>
+                <div class="event-tags">
+                    <span class="tag">#вангог</span>
+                    <span class="tag">#искусство</span>
+                    <span class="tag">#традиция</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="realism" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Выставка «Реализмы» 🖼️</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_6.jpg" alt="Реализмы">
+                    </div>
+                <div class="event-date">8 июня 2024</div>
+                <p>Посетили выставку «Реализмы» — тот самый проект, где смешались стили. 
+                    А после — наш уютный итальянский вечер, где даже я, обычно не пьющая коктейли, сделала исключение для такой компании.</p>
+                <div class="event-tags">
+                    <span class="tag">#реализмы</span>
+                    <span class="tag">#итальянскаякухня</span>
+                    <span class="tag">#коктейли</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="planetarium" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Космическое путешествие 🌌</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_7.jpg" alt="Планетарий">
+                    </div>
+                <div class="event-date">20 июля 2024</div>
+                <p>Спасибо, что составила нам компанию в Планетарии! Для меня важно, что ты с лёгкостью проводишь время с моими детьми. 
+                Лёша так проникся атмосферой, что уснул под звёздным куполом. Ну и конечно же после такого мы не могли не зайти в «Вкусно — и точка» за бургерами.</p>
+                <div class="event-tags">
+                    <span class="tag">#планетарий</span>
+                    <span class="tag">#дети</span>
+                    <span class="tag">#бургеры</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="zaryadie" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2> Зарядье, Арбат и тако 🌯</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_8.jpg" alt="Арбат">
+                    </div>
+                <div class="event-date">11 августа 2024</div>
+                <p>  Прогулка по Зарядью и Арбату втроём с Викой — закрыли один пункт нашего вишлиста мест, которые хотели посетить! 
+                    А после — настоящее путешествие во времени в дайнер 50-х Hotel California. Окунулись в атмосферу Америки с её милкшейками и тако, простыми радостями и тёплой компанией.</p>
+                <div class="event-tags">
+                    <span class="tag">#зарядье</span>
+                    <span class="tag">#арбат</span>
+                    <span class="tag">#тако</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="it-picnic" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>ИТ-пикник в Коломенском🎸</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_9.jpg" alt="ИТ-Пикник 1">
+                    </div>
+                <div class="event-date">17 августа 2024</div>
+                <p>ИТ-пикник от Т-Банк: выступления Авито и Arenadata DB, лекция про клиповое мышление, подпевали Агутину. Хотели заглянуть к HR-ам, но с Мишей и Лёшей как-то не сложилось.</p>
+                <div class="event-tags">
+                    <span class="tag">#итпикник</span>
+                    <span class="tag">#тинькофф</span>
+                    <span class="tag">#рокмузыка</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="musical" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Мюзикл «Ничего не бойся, я с тобой» 🎭</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_10.jpg" alt="Мюзикл">
+                    </div>
+                <div class="event-date">10 октября 2024</div>
+                <p>Ты пошла на этот мюзикл повторно, чтобы я тоже его увидела — это бесценно! Он правда оказался достойным.
+                Но всё равно больше запомнилась та самая пивная тарелка, которую мы так и не одолели, торопились на автобус. Теперь-то уж мы точно взяли бы такси!</p>
+                <div class="event-tags">
+                    <span class="tag">#мюзикл</span>
+                    <span class="tag">#бар</span>
+                    <span class="tag">#вино</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="corporate-2024" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Юбилейный корпоратив Logistix 👗</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_11.jpg" alt="20-летие">
+                    </div>
+                <div class="event-date">3 ноября 2024</div>
+                <p> Надели вечерние платья, сделали шикарные причёски и макияж — мы были самыми яркими на корпоративе! 
+                    Победили в косплее картин, угадали цену мировых шедевров (почти сами) ну и просто зажгли танцпол. А это, заметь, наше первое совместное фото!</p>
+                <div class="event-tags">
+                    <span class="tag">#корпоратив</span>
+                    <span class="tag">#красота</span>
+                    <span class="tag">#победа</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="dance-show" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Танцевальное шоу «Не говори кто» 💃</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_12.jpg" alt="Випхеды">
+                    </div>
+                <div class="event-date">30 ноября 2024</div>
+                <p>Концерт Whipheadz с крампом — и мы все были в восторге! Даже ты, хоть и не увлекаешься современными танцами. 
+                    Атмосфера мистического детектива, соджу и наши уже почти традиционные роллы после — идеальное завершение вечера.</p>
+                <div class="event-tags">
+                    <span class="tag">#танцы</span>
+                    <span class="tag">#випхеды</span>
+                    <span class="tag">#соджу</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="vivaldi" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Концерт «Вивальди. Времена года» 🎵</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_14.jpg" alt="Вивальди">
+                    </div>
+                <div class="event-date">15 декабря 2024</div>
+                <p> Слушали Вивальди с песочной анимацией — погрузились в сказку! 
+                    Потом отправились закрывать наш гастрономический гештальт: хотели мидии в «Моремании», но не сложилось. 
+                    Зато попали в SHE — пробовали устриц и морских ежей! Дорого, но круто. 
+                    Закрепили успех в соседнем баре с тем же шампанским, но по приятным ценам. Голова наутро напоминала о невероятном экспириансе!</p>
+                <div class="event-tags">
+                    <span class="tag">#вивальди</span>
+                    <span class="tag">#морепродукты</span>
+                    <span class="tag">#шампанское</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="mini-corporate-dec" class="event-popup">
+    <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Мини-корпоратив с московскими коллегами 🎄</h2>
+                
+                <div class="event-photo">
+                    <img src="photos/foto_14b.jpg" alt="Мини-корпоратив">
+                </div>
+                
+                <div class="event-date">27 декабря 2024</div>
+                <p>Собрались с московскими коллегами в «Гамбринус» в Перово на предпраздничную встречу. Неплохо провели время в уютной атмосфере! Мы выпили неплохой вердехо, а в завершении... я впервые попробовала Б-52 (это фу!).</p>
+                <div class="event-tags">
+                    <span class="tag">#корпоратив</span>
+                    <span class="tag">#предновогодний</span>
+                    <span class="tag">#московскаякоманда</span>
+            </div>
+        </div>
+    </div>
+
+        <div id="cinderella" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Ледовое шоу «Золушка» ⛸️</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_15.jpg" alt="Золушка">
+                    </div>
+                <div class="event-date">30 декабря 2024</div>
+                <p>Сходили с детьми на ледовое шоу «Золушка» с участием Плющенко и Трусовой. Рада, что ты была с нами — с тобой даже поход с детьми становится веселее. 
+                   После шоу заглянули в «Эль Патио»: наелись пиццы и выпили по коктейлю.</p>
+                <div class="event-tags">
+                    <span class="tag">#золушка</span>
+                    <span class="tag">#ледовоешоу</span>
+                    <span class="tag">#эльпатио</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="skating-vdnh" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Катание на коньках на ВДНХ ⛸️</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_16.jpg" alt="ВДНХ">
+                    </div>
+                <div class="event-date">3 января 2025</div>
+                <p> Эти билеты на ВДНХ дались нам с боем, мы чуть не остались без катка на Новый год. Но мы прорвались! 
+                    Катались с детьми и получили полный восторг, хотя мои коньки не выдержали. Главное, что обошлось без травм. После мы согрелись глинтвейном в «Тануки».</p>
+                <div class="event-tags">
+                    <span class="tag">#вднх</span>
+                    <span class="tag">#коньки</span>
+                    <span class="tag">#глинтвейн</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="snowboard" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Сноуборд-приключение 🏂</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_17.jpg" alt="Ватрушки">
+                    </div>
+                <div class="event-date">6 января 2025</div>
+                <p> Пытались закрыть мой гештальт со сноубордом — но что-то пошло не так. Зато на ватрушках мы показали класс — вот тут мы профи!
+                    А вечером собрали шикарную сырную тарелку и запили моим любимым совиньон бланом. </p>
+                <div class="event-tags">
+                    <span class="tag">#сноуборд</span>
+                    <span class="tag">#сырнаятарелка</span>
+                    <span class="tag">#совиньонблан</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="skating-bratskaya" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Катание на коньках на Братиславской ⛸️</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_18.jpg" alt="Братиславская">
+                    </div>
+                <div class="event-date">18 января 2025</div>
+                <p>Катались на коньках на Братиславской с тобой и Алёшей. Погода порадовала: стоило нам уйти с катка, как пошёл снег. После, как обычно, за роллами, где мы наконец попробовали саке. 
+                    Обычная, но такая приятная прогулка. <br>
+                    P.S. …и да, я уже в новых коньках со своими гламурными розовыми шнурками!.</p>
+                <div class="event-tags">
+                    <span class="tag">#братиславская</span>
+                    <span class="tag">#коньки</span>
+                    <span class="tag">#саке</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="skating-kremlin" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Каток у Кремля и бургеры 🍔</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_20.jpg" alt="Кремлевский каток">
+                    </div>
+                <div class="event-date">9 февраля 2025</div>
+                <p>Наконец-то нам покорился каток у Кремля! Покатались вчетвером, а после пошли в «Фарш» — пробовать те самые крутые бургеры, которые мы так давно хотели. 
+                    Ты впервые попробовала тёмное пиво. Завершили вечер прогулкой по Красной площади среди ярких декораций к Китайскому Новому году.</p>
+                <div class="event-tags">
+                    <span class="tag">#кремль</span>
+                    <span class="tag">#фарш</span>
+                    <span class="tag">#краснаяплощадь</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="skating-bolotnaya" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Катание на коньках на Болотной ⛸️</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_19.jpg" alt="Болотная">
+                    </div>
+                <div class="event-date">25 января 2025</div>
+                <p>Коньки на Болотной, фуд-молл «Fish культура»,
+                    две бутылки рислинга, морепродукты с сыром и под конец коктейль Pornstar Martini.
+                    Ну и неожиданные вышибалы с Лёшкой и матрёшками на улице. Такой вечер не спланировать — он просто случается! Ик :&#41</p>
+                <div class="event-tags">
+                    <span class="tag sports-tag">#коньки</span>
+                    <span class="tag sports-tag">#болотная</span>
+                    <span class="tag sports-tag">#активныйотдых</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="sasha-birthday" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Мюзикл «Москва слезам не верит» 🎂</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_21.jpg" alt="Мой др">
+                    </div>
+                <div class="event-date">11 февраля 2025</div>
+                <p>Впервые попали на гастрономический мюзикл «Москва слезам не верит» — ужин, шоу бродвейского уровня и танцы под Anna Asti! Было здорово провести мой день с тобой и Вовой: 
+                    изысканная еда, атмосфера светской вечеринки и наша любимая музыка.</p>
+                <div class="event-tags">
+                    <span class="tag">#деньрождения</span>
+                    <span class="tag">#гастрономическиймюзикл</span>
+                    <span class="tag">#москваслезамневерит</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="peredvizhniki" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Выставка «Передвижники» 🎨</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_22.jpg" alt="Передвижники">
+                    </div>
+                <div class="event-date">23 марта 2025</div>
+                <p>Втроем с Викой сходили на выставку «Передвижники» в Новую Третьяковку, а после ты наконец повела нас в тот самый грузинский ресторан «Хачапури и вино». 
+                    Без тебя мы бы не попали в это популярное место! Гранатовое вино и правда оказалось восхитительным.</p>
+                <div class="event-tags">
+                    <span class="tag">#передвижники</span>
+                    <span class="tag">#третьяковка</span>
+                    <span class="tag">#грузинскаякухня</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="bosch-bruegel" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Выставка «Босх и Брейгели» 🎨</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_23.jpg" alt="Босх и Брейгели">
+                    </div>
+                <div class="event-date">17 мая 2025</div>
+                <p>Сходили на выставку Босха и Брейгелей — необычная живопись, но впечатлила даже сына и мужа! После весело посидели в баре, попробовали сеты из настоек, а затем гуляли по Парку Горького. 
+                    Ты впервые каталась на катамаранах и была в полном восторге!</p>
+                <div class="event-tags">
+                    <span class="tag">#босх</span>
+                    <span class="tag">#брейгель</span>
+                    <span class="tag">#катамараны</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="mhat" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Спектакль «Новая оптимистическая» 🎭</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_24.jpg" alt="Богомолов">
+                    </div>
+                <div class="event-date">10 июня 2025</div>
+                <p>Потратили твой подарок с пользой и сходили в МХАТ на «Новую оптимистическую» Богомолова. Яркая сатира, необычная подача и возрастное ограничение 18+. Мы еще не видели таких смелых постановок. Настоящий театральный эксперимент!
+
+                 <div class="event-tags">
+                    <span class="tag">#мхат</span>
+                    <span class="tag">#богомолов</span>
+                    <span class="tag">#эксперимент</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="todes" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Спектакль "#Продолжение" 💃</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_25.jpg" alt="TODES">
+                    </div>
+                <div class="event-date">20 июня 2025</div>
+                <p>Сходили на шоу «#Продолжение» знаменитого балета Аллы Духовой — интересно было увидеть легендарный TODES вживую! Жаль, что не было Ильдара, на которого мы рассчитывали, а хореография показалась немного устаревшей. 
+                    Но мы всё равно хорошо провели время вместе, а после пробовали новые чуррос в «Вкусно — и точка»!</p>
+                <div class="event-tags">
+                    <span class="tag">#тодес</span>
+                    <span class="tag">#балет</span>
+                    <span class="tag">#вкусноиточка</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="pottery" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Мастер-класс по гончарному искусству 🏺</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_26.jpg" alt="Гоначарка">
+                    </div>
+                <div class="event-date">4 июля 2025</div>
+                <p>Воплотили твою мечту — сходили на гончарный мастер-класс! Я обычно такое не люблю, но нам с сыном неожиданно понравилось. У нас получились две тарелки-сердечка с разделённой надписью: «Мечтай, твори» и «Мечтай, люби».</p>
+                <div class="event-tags">
+                    <span class="tag">#гончарноеискусство</span>
+                    <span class="tag">#мастеркласс</span>
+                    <span class="tag">#тарелкасердечко</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="sup-boarding" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Последний летний заплыв 🏄‍♀️</h2>
+                
+                    <div class="event-photo">
+                        <img src="photos/foto_26b.jpg" alt="Катание на сапах">
+                    </div>
+                    
+                <div class="event-date">4 августа 2025</div>
+                <p>Урвали последний тёплый день и покатались на сап-бордах на Дзержинском карьере! 
+                    Я давно катаюсь, а ты впервые попробовала — здорово, что разделила моё увлечение. После устроили дегустацию: вина с Коктебеля со сладостями из Калининграда. Мы как будто рождены быть сомелье!</p>
+                <div class="event-tags">
+                    <span class="tag adventure-tag">#сапы</span>
+                    <span class="tag adventure-tag">#активныйотдых</span>
+                    <span class="tag adventure-tag">#лето</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="detective-party" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Detective Party 🕵️</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_27.png" alt="Детектив пати">
+                    </div>
+                <div class="event-date">8 августа 2025</div>
+                <p>Встретились с коллегами на детектив-пати — мероприятие было так себе, но для компании сошло. Разбирали улики, допрашивали подозреваемых, не вставая из-за стола. Зато нашли еще один повод выбраться из дома и провести время вместе!</p>
+                <div class="event-tags">
+                    <span class="tag">#детективпати</span>
+                    <span class="tag">#коллеги</span>
+                    <span class="tag">#встреча</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="it-picnic-2025" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>ИТ-Пикник 2025 🎸</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_28.jpg" alt="ИТ-Пикник 2025 ">
+                    </div>
+                <div class="event-date">16 августа 2025</div>
+                <p> Снова побывали на ИТ-пикнике: послушали лекцию о музыке, продуктивности в IT, танцевали под Тосю Чайкину и песни Дианы Арбениной, а в конце зажгли под «Князя», подпевая каждую песню. Надеюсь, это не последний наш ИТ-пикник вместе!</p>
+                <div class="event-tags">
+                    <span class="tag">#итпикник</span>
+                    <span class="tag">#танцпол</span>
+                    <span class="tag">#князь</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="ozone-code" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Ozone Code 🦆</h2>
+                    <div class="event-photo">
+                        <img src="photos/foto_29.jpg" alt="Озон">
+                    </div>
+                <div class="event-date">13 сентября 2025</div>
+                <p>Отметили День программиста на Ozone Code! Прошли кучу квестов, выиграли утконосов, вкусно поели, пили пинокриджио и танцевали под Нейромонаха Феофана.
+                Как я рада, что мы представили тебя QA Team Lead, и с нами была моя любимая «гранж-сущность»!</p>
+                <div class="event-tags">
+                    <span class="tag">#ozonecode</span>
+                    <span class="tag">#утконос</span>
+                    <span class="tag">#нейромонахфеофан</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="ksusha-birthday" class="event-popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>👑 День Рождения Ксюши! 🎂</h2>
+                 <div class="event-photo">
+                        <img src="photos/foto_30.jpg" alt="Ксюшин ДР">
+                    </div>
+                <div class="event-date">17 октября 2025</div>
+                <p>А это твой день, поздравляю тебя, моя дорогая! Мы как героини известного фильма — я твоя мечтательная Лорелей, 
+                    а ты моя рациональная Дороти. Как же я рада, что мы стали так близки! Пусть наш общий вишлист пополняется, а все задуманное сбывается — я уверена, нас ждёт ещё много увлекательных приключений! 
+                    Желаю, чтобы каждый твой день был наполнен счастьем, вдохновением и новыми открытиями! 🥳</p>
+                <div class="event-tags">
+                    <span class="tag" style="background: #FFD700; color: #8B4513">#деньрождения</span>
+                    <span class="tag" style="background: #FFD700; color: #8B4513">#ксюша</span>
+                    <span class="tag" style="background: #FFD700; color: #8B4513">#королевадня</span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

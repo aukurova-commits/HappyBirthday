@@ -1,0 +1,504 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+    margin-top: 30px; /* ДОБАВЛЯЕМ ОТСТУП СВЕРХУ */
+}
+
+.main-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.birthday-wish {
+    font-size: 1.3em;
+    color: #FFD700;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+    animation: sparkle 2s infinite;
+    line-height: 1.3;
+    text-align: center;
+    /* Оставляем на всю ширину */
+}
+
+/* Близко к фону #667eea, #764ba2 но с легким отличием */
+#map-2023-2024 {
+    background: linear-gradient(45deg, #7184E6, #8267C3);
+}
+
+#map-2025 {
+    background: linear-gradient(45deg, #798BEA, #8A6CC9);
+}
+
+.instructions {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px; /* Добавляем отступ сверху */
+    font-size: 0.9em;
+    line-height: 1.5;
+    text-align: center;
+    display: inline-block;
+    min-width: 70%;
+    max-width: 85%;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 14px;
+    margin-top: 16px; /* ← ДОБАВЛЯЕМ ЭТУ СТРОКУ */
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 0.9em;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* КОНТЕЙНЕР ДЛЯ ДВУХ КАРТ */
+.maps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 40px;
+    max-width: 1600px; /* Нормальная ширина */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* КАРТЫ С ЗМЕЙКАМИ */
+.adventure-map {
+    position: relative;
+    width: 100%;
+    height: 380px; /* Уменьшили высоту */
+    background: linear-gradient(45deg, #8BC6EC, #9599E2);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    overflow: hidden;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100"><circle cx="20" cy="20" r="2" fill="white" opacity="0.3"/><circle cx="80" cy="40" r="1" fill="white" opacity="0.3"/><circle cx="60" cy="70" r="1.5" fill="white" opacity="0.3"/></svg>');
+}
+
+/* НАСТОЯЩАЯ КОРОНА ДЛЯ ДНЯ РОЖДЕНИЯ */
+.birthday-marker .marker-pin { 
+    background: #FFD700 !important;
+    border-color: #FFA500 !important;
+    width: 40px !important;
+    height: 40px !important;
+    position: relative;
+    animation: crown-glow 2s infinite;
+}
+
+/* СОЗДАЕМ ФОРМУ КОРОНЫ */
+.birthday-marker .marker-pin::before {
+    content: '👑';
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    z-index: 25;
+}
+
+.birthday-marker .marker-pulse { 
+    border-color: #FFD700 !important;
+    width: 70px !important;
+    height: 70px !important;
+    background: radial-gradient(circle, rgba(255,215,0,0.2) 0%, transparent 70%);
+}
+
+.birthday-marker .marker-date {
+    background: linear-gradient(135deg, #FFD700, #FFA500) !important;
+    color: #8B4513 !important;
+    border-color: #B8860B !important;
+    font-weight: bold !important;
+    box-shadow: 0 4px 12px rgba(255,215,0,0.6) !important;
+    padding: 8px 16px !important;
+    font-size: 0.85em !important;
+    top: -60px !important;
+}
+
+.event-photo {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.event-photo img {
+    max-width: 100%;
+    max-height: 55vh; /* БЫЛО 65vh - УМЕНЬШАЕМ */
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    border: 3px solid #4A90E2;
+    object-fit: contain;
+}
+
+
+@keyframes crown-glow {
+    0% { 
+        box-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500;
+        transform: rotate(-45deg) scale(1);
+    }
+    50% { 
+        box-shadow: 0 0 20px #FFD700, 0 0 40px #FFA500, 0 0 60px #FF8C00;
+        transform: rotate(-45deg) scale(1.1);
+    }
+    100% { 
+        box-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500;
+        transform: rotate(-45deg) scale(1);
+    }
+}
+
+/* УВЕЛИЧИВАЕМ ОТСТУП ДЛЯ КОРОНЫ */
+.birthday-marker .marker-date {
+    top: -70px !important;
+}
+
+/* ЭФФЕКТ СВЕЧЕНИЯ ДЛЯ ДР */
+@keyframes birthday-glow {
+    0% { box-shadow: 0 0 5px #FFD700; }
+    50% { box-shadow: 0 0 20px #FFD700, 0 0 30px #FFA500; }
+    100% { box-shadow: 0 0 5px #FFD700; }
+}
+
+.birthday-marker .marker-pin {
+    animation: birthday-glow 2s infinite;
+}
+
+/* МАРКЕРЫ - ОСНОВНЫЕ СТИЛИ */
+.marker {
+    position: absolute;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.map-title {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    z-index: 5;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* РАВНОМЕРНО С ШИРОКИМ НАКЛОНОМ СПРАВА */
+#map-2023-2024 .marker-1 { top: 55%; left: 5%; }
+#map-2023-2024 .marker-2 { top: 35%; left: 11.25%; }
+#map-2023-2024 .marker-3 { top: 75%; left: 17.5%; }
+#map-2023-2024 .marker-4 { top: 35%; left: 23.75%; }
+#map-2023-2024 .marker-5 { top: 75%; left: 30%; }
+#map-2023-2024 .marker-6 { top: 35%; left: 36.25%; }
+#map-2023-2024 .marker-7 { top: 75%; left: 42.5%; }
+#map-2023-2024 .marker-8 { top: 35%; left: 48.75%; }
+#map-2023-2024 .marker-9 { top: 75%; left: 55%; }
+#map-2023-2024 .marker-10 { top: 35%; left: 61.25%; }
+#map-2023-2024 .marker-11 { top: 75%; left: 67.5%; }
+#map-2023-2024 .marker-12 { top: 35%; left: 73.75%; }
+#map-2023-2024 .marker-13 { top: 75%; left: 80%; }
+#map-2023-2024 .marker-14 { top: 35%; left: 85%; }   /* ШИРЕ! */
+#map-2023-2024 .marker-14b { top: 75%; left: 90%; }  /* ШИРЕ! */
+#map-2023-2024 .marker-15 { top: 35%; left: 95%; }
+
+/* ВТОРАЯ ЗМЕЙКА (2025) - ПРАВИЛЬНАЯ ЗМЕЙКА */
+#map-2025 .marker-16 { top: 55%; left: 5%; }
+#map-2025 .marker-17 { top: 35%; left: 11%; }
+#map-2025 .marker-18 { top: 75%; left: 17%; }
+#map-2025 .marker-19 { top: 35%; left: 23%; }
+#map-2025 .marker-20 { top: 75%; left: 29%; }
+#map-2025 .marker-21 { top: 35%; left: 35%; }
+#map-2025 .marker-22 { top: 75%; left: 41%; }
+#map-2025 .marker-23 { top: 35%; left: 47%; }
+#map-2025 .marker-24 { top: 75%; left: 53%; }
+#map-2025 .marker-25 { top: 35%; left: 59%; }
+#map-2025 .marker-26 { top: 75%; left: 65%; }
+#map-2025 .marker-26b { top: 35%; left: 71%; }   /* САПЫ - 4 АВГ (ВВЕРХУ) */
+#map-2025 .marker-27 { top: 75%; left: 77%; }    /* ДЕТЕКТИВ ПАТИ - 8 АВГ (ВНИЗУ) */
+#map-2025 .marker-28 { top: 35%; left: 83%; }    /* ИТ-ПИКНИК - 16 АВГ (ВВЕРХУ) */
+#map-2025 .marker-29 { top: 75%; left: 89%; }    /* OZONE CODE - 13 СЕН (ВНИЗУ) */
+#map-2025 .marker-30 { top: 45%; left: 95%; }    /* День рождения (ПО ЦЕНТРУ) */
+
+.marker-pin {
+    width: 30px;
+    height: 30px;
+    border: 4px solid white;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.4);
+}
+
+.marker-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+/* ДАТЫ - УМЕНЬШЕННЫЕ */
+.marker-date {
+    position: absolute;
+    top: -40px; /* Меньше отступ */
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 4px 8px; /* Меньше padding */
+    border-radius: 6px;
+    font-size: 0.75em; /* Меньше шрифт */
+    font-weight: bold;
+    white-space: nowrap;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    color: #333;
+    min-width: 70px; /* Уже */
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    z-index: 20;
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+}
+
+.marker:hover {
+    transform: translate(-50%, -50%) scale(1.3);
+    z-index: 100;
+}
+
+.marker:hover .marker-date {
+    background: #fffacd;
+    border-color: #ffd700;
+}
+
+/* ОБНОВЛЕННЫЕ ЦВЕТА ПО КАТЕГОРИЯМ */
+.career-marker .marker-pin { background: #4A90E2 !important; }
+.career-marker .marker-pulse { border-color: #4A90E2 !important; }
+
+.art-marker .marker-pin { background: #FF9F43 !important; }
+.art-marker .marker-pulse { border-color: #FF9F43 !important; }
+
+.theater-marker .marker-pin { background: #9B59B6 !important; }
+.theater-marker .marker-pulse { border-color: #9B59B6 !important; }
+
+.sports-marker .marker-pin { background: #F1C40F !important; }
+.sports-marker .marker-pulse { border-color: #F1C40F !important; }
+
+.walk-marker .marker-pin { background: #95A5A6 !important; }
+.walk-marker .marker-pulse { border-color: #95A5A6 !important; }
+
+.experiment-marker .marker-pin { background: #1ABC9C !important; }
+.experiment-marker .marker-pulse { border-color: #1ABC9C !important; }
+
+.corporate-marker .marker-pin { background: #E74C3C !important; }
+.corporate-marker .marker-pulse { border-color: #E74C3C !important; }
+.corporate-tag { background: #E74C3C !important; }
+
+/* ПОПАПЫ */
+.event-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 880px; /* ЕЩЁ ЧУТОЧКУ ШИРЕ */
+    width: 94%;
+    max-height: 94vh; /* ЕЩЁ ЧУТОЧКУ ВЫШЕ */
+    min-height: 600px; /* ЕЩЁ ЧУТОК ВЫШЕ МИНИМУМ */
+    overflow-y: auto;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.event-date {
+    color: #667eea;
+    font-weight: bold;
+    margin: 8px 0;
+    font-size: 1em;
+}
+
+.career-event .event-date {
+    color: #4A90E2 !important;
+}
+
+.event-tags {
+    margin-top: 12px;
+}
+
+.tag {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 15px;
+    font-size: 0.75em;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.career-tag {
+    background: #4A90E2 !important;
+}
+
+.art-tag { background: #FF9F43 !important; }
+.theater-tag { background: #9B59B6 !important; }
+.sports-tag { background: #F1C40F !important; }
+.walk-tag { background: #95A5A6 !important; }
+.experiment-tag { background: #1ABC9C !important; }
+.corporate-tag { background: #E74C3C !important; }
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    
+    .maps-container {
+        max-width: 100%;
+        width: 100%;
+        gap: 30px;
+    }
+    
+    .adventure-map {
+        height: 400px;
+    }
+
+    .adventure-map {
+        height: 280px;
+    }
+    
+    .main-header h1 {
+        font-size: 2em;
+    }
+    
+    .instructions {
+        max-width: 90%;
+        font-size: 0.8em;
+    }
+    
+    .marker-pin {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .marker-date {
+        top: -30px;
+        font-size: 0.65em;
+        min-width: 60px;
+        padding: 3px 6px;
+    }
+    
+    .marker-pulse {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .legend {
+        gap: 10px;
+    }
+    
+    .legend-item {
+        font-size: 0.8em;
+    }
+    
+    .popup-content {
+        max-width: 95%;
+        max-height: 95vh;
+        padding: 20px;
+    }
+    
+    .vacation-block {
+        height: 50px;
+    }
+    
+    .vacation-text {
+        font-size: 1em;
+        padding: 6px 15px;
+    }
+
+    @media (max-width: 768px) {
+    .event-photo {
+        max-height: 200px;
+    }
+    
+    .event-photo img {
+        max-height: 40vh; /* На телефонах еще меньше */
+    }
+    }   
+}
