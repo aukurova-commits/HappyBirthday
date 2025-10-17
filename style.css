@@ -427,41 +427,74 @@ body {
     to { opacity: 1; }
 }
 
+/* МОБИЛЬНАЯ ВЕРСИЯ */
 @media (max-width: 768px) {
-    
-    .maps-container {
-        max-width: 100%;
-        width: 100%;
-        gap: 30px;
+    body {
+        padding: 10px;
     }
     
-    .adventure-map {
-        height: 400px;
+    .container {
+        padding: 0 5px;
     }
-
-    .adventure-map {
-        height: 280px;
+    
+    .main-header {
+        margin-bottom: 25px;
+        margin-top: 15px;
     }
     
     .main-header h1 {
-        font-size: 2em;
+        font-size: 1.8em;
+        line-height: 1.2;
+        margin-bottom: 8px;
+    }
+    
+    .birthday-wish {
+        font-size: 1.1em;
+        line-height: 1.3;
+        margin-bottom: 10px;
     }
     
     .instructions {
-        max-width: 90%;
         font-size: 0.8em;
+        padding: 12px;
+        margin-bottom: 15px;
+        max-width: 95%;
+    }
+    
+    .legend {
+        gap: 8px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    
+    .legend-item {
+        font-size: 0.75em;
+    }
+    
+    .legend-color {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .maps-container {
+        gap: 25px;
+        margin-bottom: 30px;
+    }
+    
+    .adventure-map {
+        height: 300px;
+        border-radius: 15px;
+    }
+    
+    .map-title {
+        font-size: 1.2em;
+        top: 15px;
     }
     
     .marker-pin {
         width: 20px;
         height: 20px;
-    }
-    
-    .marker-date {
-        top: -30px;
-        font-size: 0.65em;
-        min-width: 60px;
-        padding: 3px 6px;
+        border-width: 3px;
     }
     
     .marker-pulse {
@@ -469,36 +502,145 @@ body {
         height: 35px;
     }
     
-    .legend {
-        gap: 10px;
+    .marker-date {
+        top: -28px;
+        font-size: 0.65em;
+        min-width: 55px;
+        padding: 2px 5px;
     }
     
-    .legend-item {
-        font-size: 0.8em;
+    .marker:hover {
+        transform: translate(-50%, -50%) scale(1.2);
     }
     
+    /* ПОПАПЫ НА МОБИЛЬНЫХ */
     .popup-content {
-        max-width: 95%;
-        max-height: 95vh;
-        padding: 20px;
+        padding: 20px 15px;
+        width: 98%;
+        max-width: 98%;
+        max-height: 90vh;
+        min-height: 500px;
+        border-radius: 12px;
     }
     
-    .vacation-block {
-        height: 50px;
+    .popup-content h2 {
+        font-size: 1.3em;
+        line-height: 1.3;
+        margin-bottom: 10px;
     }
     
-    .vacation-text {
-        font-size: 1em;
-        padding: 6px 15px;
+    .popup-content p {
+        font-size: 0.9em;
+        line-height: 1.4;
     }
-
-    @media (max-width: 768px) {
+    
+    .close-btn {
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+    }
+    
+    /* КАРТИНКИ В ПОПАПАХ */
     .event-photo {
-        max-height: 200px;
+        margin: 12px 0;
     }
     
     .event-photo img {
-        max-height: 40vh; /* На телефонах еще меньше */
+        max-height: 40vh;
+        max-width: 95%;
+        border-width: 2px;
     }
-    }   
+    
+    .event-date {
+        font-size: 0.9em;
+        margin: 6px 0;
+    }
+    
+    .event-tags {
+        margin-top: 10px;
+    }
+    
+    .tag {
+        font-size: 0.7em;
+        padding: 3px 6px;
+    }
+    
+    /* ОСОБЫЕ СТИЛИ ДЛЯ КОРОНЫ */
+    .birthday-marker .marker-pin {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    
+    .birthday-marker .marker-pulse {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    
+    .birthday-marker .marker-date {
+        top: -45px !important;
+        font-size: 0.7em !important;
+        padding: 6px 12px !important;
+    }
+}
+
+/* ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ЭКРАНОВ */
+@media (max-width: 480px) {
+    .main-header h1 {
+        font-size: 1.6em;
+    }
+    
+    .birthday-wish {
+        font-size: 1em;
+    }
+    
+    .adventure-map {
+        height: 250px;
+    }
+    
+    .event-photo img {
+        max-height: 35vh;
+    }
+    
+    .popup-content {
+        padding: 15px 10px;
+        min-height: 450px;
+    }
+    
+    .popup-content h2 {
+        font-size: 1.1em;
+    }
+    
+    .popup-content p {
+        font-size: 0.85em;
+    }
+    
+    .marker-pin {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .marker-date {
+        font-size: 0.6em;
+        min-width: 50px;
+    }
+    
+    .instructions {
+        font-size: 0.75em;
+        padding: 10px;
+    }
+}
+
+/* ДЛЯ ГОРИЗОНТАЛЬНОЙ ОРИЕНТАЦИИ НА МОБИЛЬНЫХ */
+@media (max-width: 768px) and (orientation: landscape) {
+    .adventure-map {
+        height: 200px;
+    }
+    
+    .popup-content {
+        max-height: 85vh;
+    }
+    
+    .event-photo img {
+        max-height: 30vh;
+    }
 }
